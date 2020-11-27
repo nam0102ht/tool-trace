@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.mservice.gen";
+option java_outer_classname = "GrpcServer";
+package com.mservice.gen;
+
+// The greeting service definition.
+service CatLog {
+ // Sends a command get log 148
+ rpc Command148 (Command) returns (stream Log) {}
+ // Sends a command get log 218
+ rpc Command218 (Command) returns (stream Log) {}
+ // Sends a command get log 232
+ rpc Command232 (Command) returns (stream Log) {}
+ // Send a command get log 108
+ rpc Command108 (Command) returns (stream Log) {}
+ // Send a command get log 102
+  rpc Command102 (Command) returns (stream Log) {}
+ // Send a command get log 13.12
+ rpc Command12 (Command) returns (stream Log) {}
+}
+
+// The request message containing the user's name.
+message Command {
+ string command = 1;
+}
+
+// The response message containing the greetings
+message Log {
+ string log = 1;
+}
